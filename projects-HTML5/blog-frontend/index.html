@@ -15,43 +15,103 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-      <header id="main-header">
+      <div class="container">
+        <header id="main-header">
+          <div class="container">
+            <div id="branding">
+              <img src="img/logo.png" alt="The TechEdge">
+              <h1>The TechEdge</h1>
+            </div>
+            <nav id="main-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="single-post.html">Single Post</a></li>
+                <li><a href="add-post.html">Add Post</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <aside id="sidebar">
+          <div class="search">
+            <form>
+              <input type="search" placeholder="Search Our Blog...">
+              <input type="image" src="img/search.png" alt="Search">
+            </form>
+          </div>
+          <div class="clearfix">
+            <nav id="category-nav">
+              <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">SEO &amp; Marketing</a></li>
+                <li><a href="#">Cloud &amp; Hosting</a></li>
+                <li><a href="#">Gadgets</a></li>
+                <li><a href="#">Software</a></li>
+              </ul>
+            </nav>
+            <div class="ad">
+              <img src="img/ad.jpg" alt="Advertisement">
+            </div>
+          </div>
+        </aside>
+        <section id="content">
+          <article>
+            <header>
+              <h2>Facebook launches friend-tracking feature</h2>
+              <div class="meta">
+                <p>Posted By <strong>J.D. Gladney 1 Day ago</strong><span>(2 Comments)</span></p>  
+              </div>
+              <img src="img/blog1.jpg" alt="Post One"
+            </header>
+            <p>In dapibus neque non pulvinar varius. Donec non turpis dolor. Duis commodo erat at venenatis pellentesque. Mauris sit amet arcu tincidunt, ornare odio ut, congue ex. Vivamus et est ipsum. Praesent volutpat efficitur nibh, a fermentum est luctus ac. Suspendisse auctor tortor nec elit viverra tempor. Nunc suscipit, dolor id gravida mollis, est leo pellentesque velit, eu varius dolor odio non ante. Proin nec consequat nibh. Sed turpis sapien, suscipit nec rhoncus a, lobortis a mi. Aenean ultrices tempor risus, id viverra quam tincidunt vel. Maecenas egestas congue efficitur. Vestibulum rhoncus justo dolor, vel tempor enim laoreet vel. Nullam ultrices dapibus ipsum, id semper sem rutrum sit amet. Nulla finibus varius justo, ut semper augue luctus vitae.</p>
+            <footer>
+              <a class="read-more" href="single-post.html">Read More</a>
+            </footer>
+          </article>
+          <article>
+            <header>
+              <h2>What every web designer needs to know</h2>
+              <div class="meta">
+                <p>Posted By <strong>J.D. Gladney 3 Days ago</strong><span>(1 Comment)</span></p>  
+              </div>
+              <img src="img/blog2.jpg" alt="Post Two"
+            </header>
+            <p>In ultrices augue quam, nec vehicula augue dignissim id. Suspendisse tortor massa, luctus vel hendrerit non, suscipit at ligula. Cras sed fringilla elit. Nulla facilisi. Suspendisse et porta augue. Vestibulum imperdiet quam quis magna rutrum tempus. Aenean efficitur convallis sem, et malesuada odio sagittis ut. Suspendisse metus lectus, tempor quis tristique et, scelerisque ut diam. Aenean a pretium leo. Curabitur non neque massa. Mauris urna leo, fermentum in hendrerit non, feugiat nec elit. Donec tempus suscipit purus, non semper magna maximus ut.</p>
+            <footer>
+              <a class="read-more" href="single-post.html">Read More</a>
+            </footer>
+          </article>
+        </section>
+        <div class="clearfix"></div>
+      </div>
+      <footer id="main-footer">
         <div class="container">
-          <div id="branding">
-            <img src="img/logo.png" alt="The TechEdge">
-            <h1>The TechEdge</h1>
+          <div class="footer-right">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">SEO &amp; Marketing</a></li>
+                <li><a href="#">Cloud &amp; Hosting</a></li>
+                <li><a href="#">Gadgets</a></li>
+                <li><a href="#">Software</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav id="main-nav">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="single-post.html">Single Post</a></li>
-              <li><a href="add-post.html">Add Post</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <aside id="sidebar">
-        <div class="search">
-          <form>
-            <input type="search" placeholder="Search Our Blog...">
-            <input type="image" src="img/search.png" alt="Search">
-          </form>
-        </div>
-        <div class="clearfix">
-          <nav id="category-nav">
-            <ul>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">SEO & Marketing</a></li>
-              <li><a href="#">Cloud & Hosting</a></li>
-              <li><a href="#">Gadgets</a></li>
-              <li><a href="#">Software</a></li>
-            </ul>
-          </nav>
-          <div class="ad">
-            <img src="img/ad.jpg" alt="Advertisement">
+          <div class="footer-left">
+              <p>Copyright &copy; 2015, The TechEdge</p>
           </div>
         </div>
-      </aside>
+      </footer>
     </body>
 </html>
