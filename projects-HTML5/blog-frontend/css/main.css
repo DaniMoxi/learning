@@ -55,18 +55,78 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+a {
+  color: #222;
+  text-decoration: none;
+}
 
+h2 {
+  font-size: 25px;
+}
 
+ul {
+  margin: 0;
+  padding: 0;
+}
 
+li {
+  list-style: none;
+}
 
+.container {
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+}
 
+#main-header {
+  height: 50px;
+  background: #333;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 
+#branding {
+  float: left;
+  width: 50%;
+}
 
+#branding h1 {
+  margin: 0 !important;
+  padding: 5px 0 0 70px;
+  color: white;
+}
 
+#branding img {
+  position: absolute;
+  width: 60px;
+  height: auto;
+}
 
+#main-nav {
+  float: right;
+  width: 50%;
+  padding: 12px 0 0 0;
+}
 
+#main-nav a {
+  color: #fff;
+}
 
+#main-nav ul {
+  float: right;
+}
 
+#main-nav li {
+  float: left;
+  padding: 3px 5px 0 5px;
+  margin: 0 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  list-style: square;
+  color: #fff;
+}
 
 
 
