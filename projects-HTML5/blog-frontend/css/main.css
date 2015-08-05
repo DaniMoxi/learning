@@ -2,7 +2,7 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 12px;
     line-height: 1.4;
 }
 
@@ -109,10 +109,6 @@ li {
   padding: 12px 0 0 0;
 }
 
-#main-nav a {
-  color: #fff;
-}
-
 #main-nav ul {
   float: right;
 }
@@ -128,7 +124,141 @@ li {
   color: #fff;
 }
 
+#main-nav a {
+  color: #fff;
+}
 
+#content {
+  float: left;
+  width: 63%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+}
+
+article {
+  border-bottom: 1px dotted #ccc;
+  padding: 10px 0 20px 0;
+}
+
+article img {
+  width: 100%;
+}
+
+artice h2 {
+  margin: 0;
+  padding-top: 10px;
+}
+
+article .meta {
+  margin: 10px 0 10px 0;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.meta span {
+  float: right;
+}
+
+article .read-more {
+  background-color: #f4f4f4;
+  widows: 97%;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+article .read-more:hover {
+  background-color: #ccc;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+}
+
+.search {
+  float: right;
+}
+
+.search input[type="search"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 20px;
+  width: 85%;
+  padding: 3px;
+  float: left;
+}
+
+.search input[type="image"] {
+  width: 10%;
+  float: right;
+}
+
+#category-nav {
+  padding: 20px 0 20px 0;
+}
+
+#category-nav li {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 0;
+  border-bottom: 1px dotted #333;
+}
+
+#category-nav a {
+  color: #333;
+}
+
+#category-nav a:hover,
+#category-nav a.active {
+  color: #f00;
+}
+
+.ad img {
+  width: 100%;
+}
+
+#main-footer {
+  background-color: #333;
+  color: #fff;
+  min-height: 180px;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+#main-footer a {
+  color: #fff;
+}
+
+#main-footer p {
+  padding: 40px 0;
+}
+
+#main-footer .footer-left {
+  float: left;
+}
+
+#main-footer .footer-right {
+  float: right;
+  width: 70%;
+}
+
+#main-footer .footer-nav {
+  float: left;
+  font-size: 14px;
+  width: 31%;
+  padding: 20px 0;
+  margin-right: 10px;
+}
+
+#main-footer .footer-nav li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #666;
+}
 
 /* ==========================================================================
    Media Queries
