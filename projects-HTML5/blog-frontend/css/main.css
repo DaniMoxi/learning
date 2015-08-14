@@ -2,7 +2,7 @@
 
 html {
     color: #222;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
 }
 
@@ -173,6 +173,55 @@ article .read-more {
 
 article .read-more:hover {
   background-color: #ccc;
+}
+
+#comments {
+  margin-top: 20px;
+}
+
+.comment-left {
+  float: left;
+  width: 8%;
+}
+
+.comment-right {
+  float: right;
+  width: 90%;
+}
+
+.comment-left img {
+  width: 100%;
+}
+
+.comment-form {
+  margin-top: 20px;
+  padding: 5px 20px 10px 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 20px;
+  padding: 3px;
+  width: 97%;
+}
+
+.comment-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px;
+  width: 97%;
+}
+
+.comment-form button {
+  color: #333;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
 }
 
 #sidebar {
