@@ -1,3 +1,7 @@
+/**************************
+         GEMERAL
+***************************/
+
 body {
   background-color: #FCF9E6;
 }
@@ -23,6 +27,12 @@ p {
   font-family: Open Sans, sans-serif;
   text-align: center;
 }
+
+
+
+/**************************
+         HEADING
+***************************/
 
 .heading {
   margin: 150px 0;
@@ -75,6 +85,12 @@ p {
   font-size:1.6em;
 }
 
+
+
+/**************************
+      CONTENT-GENERAL
+***************************/
+
 .about,
 .portfolio,
 .contact {
@@ -88,6 +104,12 @@ p {
 .contact h3 {
   margin-bottom: 40px;
 }
+
+
+
+/**************************
+         ABOUT
+***************************/
 
 .about img {
   width: 50%;
@@ -113,6 +135,13 @@ p {
 .about-tech li {
   list-style: square;
 }
+
+
+
+/**************************
+         PORTFOLIO
+***************************/
+
 header {
   margin-bottom: 50px;
 }
@@ -122,6 +151,12 @@ header {
   margin: 0 auto;
   width: 80%
 }
+
+
+
+/**************************
+         FOOTER
+***************************/
 
 .footing {
   margin: 20px 0;
