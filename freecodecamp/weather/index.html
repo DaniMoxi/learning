@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href='style.css'>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row"></div><!-- row -->
+        <div class="row">
+          <h1 class="text-center">Your Local Weather</h1>
+        </div><!-- row -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="btn-group" role="group" aria-label="Temperature units">
+              <button class="btn btn-default" aria-label="Farenheit">Farenheit</button>
+              <button class="btn btn-default" aria-label="Celcius">Celcius</button>
+            </div><!-- button group -->
+          </div><!-- 6 col -->
+          <div class="col-md-6">
+            <form class="form-inline">
+              <label class="sr-only">Search location</label>
+              <input class="location" type="text" placeholder="ZIP Code (US)">
+              <button class="btn btn-default">Search</button>
+            </form>
+          </div><!-- 6 col -->
+        </div><!-- row -->
+      </div><!-- container -->
+      <div class="container">
+        <div class="row output">
+          <div class="col-md-4">
+            <h3 class="loc"></h3>
+            <p class="lat-lon"></p>
+          </div><!-- 4 col -->
+          <div class="col-md-8"></div><!-- 8 col -->
+        </div><!-- row, output -->
+      </div><!-- container -->
+    </div><!-- container-fluid -->
+  </body>
+</html>
