@@ -5,9 +5,12 @@
 .output {
   background-color: rgba(10,10,10,0.7);
 }
-.location {
+.loc-input {
   width: 80%;
   padding: 3px;
   margin: 0 5px;
 }
 
+.weather-icon {
+  width: 40px;
+}

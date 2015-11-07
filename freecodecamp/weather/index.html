@@ -15,16 +15,16 @@
           <h1 class="text-center">Your Local Weather</h1>
         </div><!-- row -->
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <div class="btn-group" role="group" aria-label="Temperature units">
               <button class="btn btn-default" aria-label="Farenheit">Farenheit</button>
               <button class="btn btn-default" aria-label="Celcius">Celcius</button>
             </div><!-- button group -->
           </div><!-- 6 col -->
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <form class="form-inline">
               <label class="sr-only">Search location</label>
-              <input class="location" type="text" placeholder="ZIP Code (US)">
+              <input class="loc-input" type="text" placeholder="ZIP Code (US)">
               <button class="btn btn-default">Search</button>
             </form>
           </div><!-- 6 col -->
@@ -32,12 +32,16 @@
       </div><!-- container -->
       <div class="container">
         <div class="row output">
-          <div class="col-md-4">
-            <h3 class="loc"></h3>
-            <p class="lat-lon"></p>
-          </div><!-- 4 col -->
-          <div class="col-md-8"></div><!-- 8 col -->
-        </div><!-- row, output -->
+          <div class="col-sm-4 location">
+            <h3 class="loc text-center"></h3>
+            <p class="lat-lon text-center"></p>
+          </div><!-- location, 4 col -->
+          <div class="weather-data col-sm-8 text-center">
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <h4 id="description"></h4>
+            <ul class="list-unstyled"></ul>
+          </div><!-- weather-data, 8 col -->
+        </div><!-- output, row -->
       </div><!-- container -->
     </div><!-- container-fluid -->
   </body>
