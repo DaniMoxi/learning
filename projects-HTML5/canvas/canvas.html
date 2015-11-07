@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Learning Canvas</title>
+    <style>
+      canvas {
+        border: #000 1px solid;
+        background-color: lightgray;
+      }
+    </style>
+    <script>
+      var canvas, ctx;
+      function init() {
+        canvas  = document.getElementById('myCanvas');
+        ctx = canvas.getContext('2d');
+        draw();
+      }
+      
+      function draw() {
+        // red square
+        ctx.fillStyle = '#f00';
+        ctx.fillRect(30, 30, 50, 50);
+        ctx.strokeStyle='#000';
+        ctx.lineWidth=3;
+        ctx.strokeRect(30,30,50,50);
+        
+        // black square
+        ctx.fillStyle = '#000';
+        ctx.fillRect(40, 40, 50, 50);
+        ctx.strokeStyle='#000';
+        ctx.lineWidth=3;
+        ctx.strokeRect(30,30,50,50);
+        
+        // text
+        ctx.font= '30pt Arial';
+        // gradient
+        var gradient = ctx.createLinearGradient(0,0,canvas.width, 0);
+        gradient.addColorStop("0", "red");
+        gradient.addColorStop("1", "black");
+        ctx.fillStyle=gradient;
+        ctx.fillText("My Company", 100, 80);
+        
+        // line
+        ctx.strokeStyle='#000';
+        ctx.fillStyle='#f00';
+        ctx.lineWidth=2;
+        ctx.beginPath();
+        ctx.moveTo(95,90);
+        ctx.lineTo(350,90);
+        ctx.stroke();
+        ctx.closePath();
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <canvas id="myCanvas" width="400" height="150">
+      <p>Sorry! Your browser does not use the canvas feature!</p>
+    </canvas>
+  </body>
+</html>
