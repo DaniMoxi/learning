@@ -94,17 +94,115 @@ body {
     border-botton: 6px solid #1ebdbe;
 }
 
-/*
 #menu ul ul li:first-child > a:after {
     left: -6px;
     top: 50%;
     margin-top: -6px;
     border-left: 0;
     border-top: 6px solid transparent;
-    border-right: 6px solid 107677;
+    border-right: 6px solid #107677;
     border-botton: 6px solid transparent;
 }
-*/
+
+#menu-trigger {
+    display: none;
+}
+
+
+
+
+@media(max-width: 700px) {
+    #menu-wrap {
+        position: relative;
+    }
+    
+    #menu-wrap * {
+        box-sizing: border-box;
+    }
+    
+    #menu-trigger {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        padding: 0 0 0 35px;
+        border: #107677 1px solid;
+        color: #fff;
+        font-weight: bold;
+        background-color: #111;
+        background: url('../img/menu.png') no-repeat 10px center, linear-gradient(#1ebdbe, #107677);
+        border-radius: 6px;        
+    }
+    
+    #menu {
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+        z-index: 1;
+        display: none;
+        box-shadow: none;
+    }
+    
+    #menu:after {
+        content: '';
+        position: absolute;
+        left: 25px;
+        top: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid #107677;
+        border-botton: 6px solid transparent;
+    }
+    
+    #menu ul {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        margin: 0;
+        background: none;
+        box-shadow: none;
+    }
+    
+    #menu ul ul {
+        margin: 0 0 0 20px;
+        box-shadow: none;
+    }
+    
+    #menu li {
+        position: static;
+        display: block;
+        float: none;
+        border: 0;
+        margin: 5px;
+        box-shadow: none;
+    }
+    
+    #menu ul li {
+        margin-left: 20px;
+        box-shadow: none;
+    }
+    
+    #menu a {
+        display: block;
+        float: none;
+        padding: 0;
+        color: white;
+    }
+    
+    #menu a:hover {
+        color: #fafafa;
+    }
+    
+    #menu ul a {
+        padding: 0;
+        width: auto;
+    }
+    
+    #menu ul a:hover {
+        background: none;
+    }
+}
 
 
 
