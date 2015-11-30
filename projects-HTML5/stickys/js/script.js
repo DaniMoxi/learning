@@ -9,6 +9,10 @@ if( window.openDatabase ) {
     alert('Failed to open database, make sure your browser supports HTML5 web storage.');
 }
 
+var capture = null;
+var highestZ = 0;
+var highestId = 0;
+
 function Note() {
     var self = this;
     
@@ -20,6 +24,9 @@ function Note() {
     }, false);
     note.addEventListener('click', function() {
         return self.onNoteClick();
+    }, false);
+    note.addEventListener('mouseup', function( event ) {
+        return self.onMouseUp( event );
     }, false);
     this.note = note;
     
@@ -34,7 +41,7 @@ function Note() {
     
     var edit = document.createElement( 'div' );
     edit.className = 'edit';
-    edit.setAttribute('contenteditable', false);
+    edit.setAttribute('contenteditable', true);
     
     edit.addEventListener('keyup', function() {
         return self.onKeyUp();
@@ -117,8 +124,6 @@ Note.prototype = {
         this.note.style.zIndex = x;
     },
     
-    onMouseDown: function( event ) {},
-    
     close: function( event ) {
         this.cancelPendingSave();
         var note = this;
@@ -159,11 +164,125 @@ Note.prototype = {
         });
     },
     
+    saveAsNew: function() {
+        this.timestamp = new Date().getTime();
+        
+        var note = this;
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO MyStickys (id, note, timestamp, left, top, zindex) VALUES (?, ?, ?, ?, ?, ?)', [note.id, note.text, note.timestamp, note.left, note.top, note.zIndex]);
+        });
+    },
     
+    onMouseDown: function( event ) {
+        capture = this;
+        this.startX = event.clientX - this.note.offsetLeft;
+        this.startY = event.clientY - this.note.offsetTop;
+        this.zIndex = ++highestZ;
+        
+        var self = this;
+        if ( !('mouseMoveHandler' in this) ) {
+            this.mouseMoveHandler = function( event ) {
+                return self.onMouseMove( event );
+            }
+            this.mouseUpHander = function( event ) {
+                return self.onMouseUp( event );
+            }
+        }
+        
+        document.addEventListener('mousemove', this.mouseMoveHandler, true);
+        document.addEventListener('mouseup', this.mouseUpHandler, true);
+        
+        return false;
+    },
     
-    onNoteClick: function() {},
+    onMouseMove: function( event ) {
+        if ( this != capture ) {
+            return true;
+        }
+        this.left = event.clientX - this.startX + 'px';
+        this.top = event.clientY - this.startY + 'px';
+        
+        return false;
+    },
     
-    onKeyUp: function() {},
+    onMouseUp: function( event ) {
+        document.removeEventListener('mousemove', this.mouseMoveHandler, true);
+        document.removeEventListener('mouseup', this.mouseUpHandler, true);
+        
+        this.save();
+        return false;
+    },
     
+    onNoteClick: function() {
+        this.editField.focus();
+        getSelection().collapseToEnd();
+    },
     
+    onKeyUp: function() {
+        this.dirty = true;
+        this.saveSoon();
+    }
 };
+
+function loaded() {
+    db.transaction(function( tx ) {
+        tx.executeSql('SELECT COUNT(*) FROM MyStickys', [], function( result ) {
+            loadNotes();
+        }, function( tx, error ) {
+            tx.executeSql('CREATE TABLE MyStickys (id REAL UNIQUE, note TEXT, timestamp REAL, left TEXT, top TEXT, zindex REAL)', [], function( result ) {
+                loadNotes();
+            });
+        });
+    });
+}
+
+function loadNotes() {
+    db.transaction(function( tx ) {
+        tx.executeSql('SELECT id, note, timestamp, left, top, zindex FROM MyStickys', [], function( tx, result ) {
+            for ( var i = 0; i < result.rows.length; i++ ) {
+                var row = result.rows.item(i);
+                var note = new Note();
+                note.id = row['id'];
+                note.text = row['note'];
+                note.timestamp = row['timestamp'];
+                note.left = row['left'];
+                note.top = row['top'];
+                note.zIndex = row['zindex'];
+                
+                if ( row['id'] > highestId ) {
+                    highestId = row['id'];
+                }
+                if ( row['zindex'] > highestZ ) {
+                    highestZ = row['zindex'];
+                }
+            }
+            
+            if ( !result.rows.length ) {
+                newNote();
+            }
+        }, function( tx, error ) {
+            alert('Failed to get notes - ' + error.message);
+        });
+    });
+}
+
+function modifiedString( date ) {
+    return 'Sticky Last Modified: ' + date.getFullYear() + ' - ' + (date.getMonth() + 1) + ' - ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds(); 
+}
+
+function newNote() {
+    var note = new Note();
+    note.id = ++highestId;
+    note.timestamp = new Date().getTime();
+    note.left = Math.round( Math.random() * 400) + 'px';
+    note.top = Math.round( Math.random() * 500) + 'px';
+    note.zIndex = ++highestZ;
+    note.saveAsNew();
+}
+
+
+
+
+if ( db !== null ) {
+    document.addEventListener('load', loaded, false);
+}
