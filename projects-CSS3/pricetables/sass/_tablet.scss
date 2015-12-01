@@ -1,0 +1,30 @@
+#container {
+    width: 80%;
+}
+
+.pkg {
+    width: 48%;
+    margin: 10px 1%;
+}
+
+.pkg:hover {
+    border: 0;
+}
+
+.highlight {
+    height: auto;
+    margin-top: 10px;
+    border: none;
+
+    li {
+        padding: 10px !important;
+    }
+    
+    .btn {
+        margin-top: -1px;    /* height of this box somehow off by 1px, so I just moved the button up */
+    }
+}
+
+.btn {
+    margin-top: 0;
+}

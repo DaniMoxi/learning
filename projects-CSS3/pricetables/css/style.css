@@ -1,0 +1,187 @@
+/* line 3, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../sass/style.scss */
+body {
+  background-color: #242e30;
+  font-family: 'Arial' sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+}
+
+/* line 15, ../sass/style.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 19, ../sass/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 23, ../sass/style.scss */
+em {
+  font-style: bold;
+  color: #3c8b9c;
+}
+
+/* line 28, ../sass/style.scss */
+#container {
+  max-width: 980px;
+  margin: 100px auto;
+}
+
+/* line 33, ../sass/style.scss */
+.pkg {
+  float: left;
+  width: 23%;
+  margin: 0 1%;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+/* line 42, ../sass/style.scss */
+.pkg h3 {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+}
+
+/* line 51, ../sass/style.scss */
+.price {
+  text-align: center;
+  padding: 20px;
+  background: #3c8b9c;
+  color: #fff;
+}
+/* line 57, ../sass/style.scss */
+.price span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* line 64, ../sass/style.scss */
+.features li {
+  line-height: 2em;
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 70, ../sass/style.scss */
+.features em {
+  font-weight: bold;
+}
+/* line 74, ../sass/style.scss */
+.features li:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+/* line 79, ../sass/style.scss */
+.btn {
+  padding: 7px 10px;
+  border: #ccc 1px solid;
+  text-align: center;
+  display: block;
+  margin: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* line 89, ../sass/style.scss */
+.btn-primary {
+  background: #6fbf44;
+  color: #fff;
+}
+
+/* line 94, ../sass/style.scss */
+.btn-primary:hover {
+  background: #65a443;
+}
+
+/* line 98, ../sass/style.scss */
+.highlight {
+  height: 520px;
+  margin-top: -30px;
+  border: #fff 4px solid;
+}
+/* line 103, ../sass/style.scss */
+.highlight .btn {
+  margin-top: 7px;
+}
+/* line 107, ../sass/style.scss */
+.highlight li {
+  padding: 12px !important;
+}
+
+@media (max-width: 979px) {
+  /* line 1, ../sass/_tablet.scss */
+  #container {
+    width: 80%;
+  }
+
+  /* line 5, ../sass/_tablet.scss */
+  .pkg {
+    width: 48%;
+    margin: 10px 1%;
+  }
+
+  /* line 10, ../sass/_tablet.scss */
+  .pkg:hover {
+    border: 0;
+  }
+
+  /* line 14, ../sass/_tablet.scss */
+  .highlight {
+    height: auto;
+    margin-top: 10px;
+    border: none;
+  }
+  /* line 19, ../sass/_tablet.scss */
+  .highlight li {
+    padding: 10px !important;
+  }
+  /* line 23, ../sass/_tablet.scss */
+  .highlight .btn {
+    margin-top: -1px;
+    /* height of this box somehow off by 1px, so I just moved the button up */
+  }
+
+  /* line 28, ../sass/_tablet.scss */
+  .btn {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* line 1, ../sass/_phone.scss */
+  #container {
+    width: 80%;
+  }
+
+  /* line 5, ../sass/_phone.scss */
+  .pkg {
+    float: none;
+    width: 100%;
+  }
+
+  /* line 10, ../sass/_phone.scss */
+  .pkg:hover {
+    border: 0;
+  }
+
+  /* line 14, ../sass/_phone.scss */
+  .highlight {
+    height: auto;
+    margin-top: 0;
+    border: none;
+  }
+
+  /* line 20, ../sass/_phone.scss */
+  .btn {
+    margin-top: 0;
+  }
+}
