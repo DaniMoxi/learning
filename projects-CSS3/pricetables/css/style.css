@@ -31,20 +31,29 @@ em {
 /* line 28, ../sass/style.scss */
 #container {
   max-width: 980px;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 /* line 33, ../sass/style.scss */
+h1 {
+  font-size: 34px;
+  color: #fff;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* line 41, ../sass/style.scss */
 .pkg {
   float: left;
   width: 23%;
   margin: 0 1%;
   box-sizing: border-box;
-  background: #fff;
+  background: white;
   overflow: hidden;
   margin-bottom: 10px;
 }
-/* line 42, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .pkg h3 {
   background: #333;
   color: #fff;
@@ -53,35 +62,40 @@ em {
   padding: 15px;
 }
 
-/* line 51, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
+.pkg:hover {
+  border: 4px white solid;
+}
+
+/* line 69, ../sass/style.scss */
 .price {
   text-align: center;
   padding: 20px;
   background: #3c8b9c;
   color: #fff;
 }
-/* line 57, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .price span {
   font-size: 25px;
   font-weight: bold;
 }
 
-/* line 64, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .features li {
   line-height: 2em;
   text-align: center;
   padding: 10px 0;
 }
-/* line 70, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .features em {
   font-weight: bold;
 }
-/* line 74, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .features li:nth-child(odd) {
   background-color: #f4f4f4;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .btn {
   padding: 7px 10px;
   border: #ccc 1px solid;
@@ -92,28 +106,28 @@ em {
   border-radius: 5px;
 }
 
-/* line 89, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .btn-primary {
   background: #6fbf44;
   color: #fff;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .btn-primary:hover {
   background: #65a443;
 }
 
-/* line 98, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .highlight {
   height: 520px;
   margin-top: -30px;
   border: #fff 4px solid;
 }
-/* line 103, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .highlight .btn {
   margin-top: 7px;
 }
-/* line 107, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .highlight li {
   padding: 12px !important;
 }
@@ -121,7 +135,7 @@ em {
 @media (max-width: 979px) {
   /* line 1, ../sass/_tablet.scss */
   #container {
-    width: 80%;
+    width: 85%;
   }
 
   /* line 5, ../sass/_tablet.scss */
@@ -159,7 +173,7 @@ em {
 @media (max-width: 768px) {
   /* line 1, ../sass/_phone.scss */
   #container {
-    width: 80%;
+    width: 85%;
   }
 
   /* line 5, ../sass/_phone.scss */

@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #242e30;
+    background-color: $bkgrd;
     font-family: 'Arial' sans-serif;
     font-size: 13px;
     line-height: 1.5em;
@@ -22,20 +22,34 @@ a {
 
 em {
     font-style: bold;
-    color: #3c8b9c;
+    color: $primary;
 }
 
 #container {
     max-width: 980px;
-    margin: 100px auto;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 34px;
+    color: #fff;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .pkg {
     float: left;
-    width: 23%;
+    @if $columns == 4 {
+        width: 23%;    
+    } @else if $columns == 3 {
+        width: 30%;
+    } @else {
+        width: 23%;    
+    }
     margin: 0 1%;
     box-sizing: border-box;
-    background: #fff;
+    background: $pkg-bkgrd;
     overflow: hidden;
     margin-bottom: 10px;
     
@@ -48,10 +62,14 @@ em {
     }
 }
 
+.pkg:hover {
+    border: 4px $pkg-bkgrd solid;
+}
+
 .price {
     text-align: center;
     padding: 20px;
-    background: #3c8b9c;
+    background: $primary;
     color: #fff;
     
     span {
@@ -87,12 +105,12 @@ em {
 }
 
 .btn-primary {
-    background: #6fbf44;
+    background: $secondary;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: #65a443;
+    background: $secondary-hover;
 }
 
 .highlight {
@@ -108,6 +126,7 @@ em {
         padding: 12px !important;
     }
 }
+
 
 @media(max-width:979px) {
     @import 'tablet.scss';
