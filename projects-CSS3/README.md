@@ -2,7 +2,7 @@
 ## Project Index:
 Click any project to view.
 
-1. [Landing Page Design](https://htmlpreview.github.io/?https://github.com/DaniMoxi/learning/blob/master/projects-CSS3/landing-page/index.html)
+1. [**Landing Page Design**](https://htmlpreview.github.io/?https://github.com/DaniMoxi/learning/blob/master/projects-CSS3/landing-page/index.html)
 2. [Responsive Tableless Calendar](https://htmlpreview.github.io/?https://github.com/DaniMoxi/learning/blob/master/projects-CSS3/calendar/index.html)
 3. [Pure CSS Image Slider](https://htmlpreview.github.io/?https://github.com/DaniMoxi/learning/blob/master/projects-CSS3/image-slider/index.html#slide7)
 4. [Transition Dropdown Menu](https://htmlpreview.github.io/?https://github.com/DaniMoxi/learning/tree/master/projects-CSS3/dropdown/index.html)
