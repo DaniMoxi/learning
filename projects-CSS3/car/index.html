@@ -4,6 +4,16 @@
         <title>Animated Car</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-1.11.3.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#body').click(function() {
+                    $('body').toggleClass('pause');
+                    $('#body').toggleClass('pause');
+                    $('#front-wheel').toggleClass('pause');
+                    $('#back-wheel').toggleClass('pause');
+                });
+            });
+        </script>
     </head>
     <body>
         <div id="container">
