@@ -97,7 +97,7 @@ a {
     border-left: 1px solid #406c96;
 }
 
-.navbar li.active  {
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus  {
     background: #406c96;
     color: #fff;
 }
@@ -140,8 +140,11 @@ ul.list-feature {
     font-size: 18px;
 }
 
-.section-showcase img {
+#main-img {
     width: 100%;
+    margin-right: -500px;
+    position: relative;
+    float: right;
 }
 
 /*************************
@@ -208,3 +211,93 @@ footer li {
     list-style: square;
     line-height: 2em;
 }
+
+/*************************
+          ANIMATION
+*************************/
+
+.animate {
+    -webkit-transition: 1s ease-in-out;
+       -moz-transition: 1s ease-in-out;
+            transition: 1s ease-in-out;
+    
+    -webkit-animation-fill-mode: forwards;
+       -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+#main-img.animate {
+    -webkit-transform: translate(-40em, 0);
+       -moz-transform: translate(-40em, 0);
+            transform: translate(-40em, 0);
+}
+
+#laptop.animate {
+    -webkit-transform: translate(12em, 0);
+       -moz-transform: translate(12em, 0);
+            transform: translate(12em, 0);
+}
+
+#mobile.animate {
+    -webkit-transform: translate(-8em, 0);
+       -moz-transform: translate(-8em, 0);
+            transform: translate(-8em, 0);
+}
+
+/*************************
+      MEDIA QUERIES
+*************************/
+
+@media(min-width: 601px) and (max-width: 960px) {
+    #laptop {
+        width: 235px;
+    }
+
+    #desktop {
+        width: 293px;
+    }
+
+    #mobile {
+        width: 148px;
+    }
+}
+
+@media(max-width: 600px) {
+    #laptop {
+        display: none;
+    }
+
+    #desktop {
+        width: 263px;
+    }
+
+    #mobile {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+    }
+    h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 25px;
+        text-align: center;
+        display: block;
+        line-height: 1.5em;
+    }
+    
+    .content-icons .fa{
+        margin-top: 30px;
+    }
+}
+

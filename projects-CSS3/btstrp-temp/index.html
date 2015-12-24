@@ -16,7 +16,7 @@
 
   <body>
 
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -76,7 +76,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <img src="img/imac.png">
+                    <img id="main-img" src="img/imac.png">
                 </div>
             </div><!-- .row -->
         </div><!-- .container -->
@@ -164,5 +164,26 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            
+            $('#main-img').addClass('animate');
+            
+            $(window).scroll(function() {
+                var y = $(this).scrollTop();
+                
+                if( y >= 200 ) {
+                    $('#laptop').addClass('animate');
+                    $('#mobile').addClass('animate');
+                }
+                
+                if ( y < 200 ) {
+                    $('#laptop').removeClass('animate');
+                    $('#mobile').removeClass('animate');
+                }
+            });
+        });  
+    </script>
   </body>
 </html>
