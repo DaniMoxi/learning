@@ -29,6 +29,14 @@ a {
     font-size: 1.7em;
 }
 
+.fa-white {
+    color: #fff;
+}
+
+.fa-lg {
+    font-size: 4em;
+}
+
 /*************************
           NAVBAR
 *************************/
@@ -128,4 +136,69 @@ ul.list-feature {
 
 .section-showcase img {
     width: 100%;
+}
+
+/*************************
+       SECTION TWO
+*************************/
+
+.content-icons {
+    text-align: center;
+}
+
+.content-icons .fa {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.content-icons h4 {
+    color: #fff;
+}
+
+/*************************
+       SECTION THREE
+*************************/
+
+.content-devices {
+    text-align: center;
+}
+
+.content-devices img {
+    position: relative;
+}
+
+#laptop {
+    width: 290px;
+    margin-left: -95px;
+    z-index: 100;
+}
+
+#desktop {
+    width: 375px;
+}
+
+#mobile {
+    width: 190px;
+    z-index: 100;
+}
+
+/*************************
+          FOOTER
+*************************/
+
+footer {
+    background-color: #406c96;
+    color: #fff;
+    border-top: #333 4px solid;
+    padding: 40px 0;
+}
+
+footer h4,
+footer a {
+    color: #fff;
+}
+
+footer li {
+    list-style: square;
+    line-height: 2em;
 }
