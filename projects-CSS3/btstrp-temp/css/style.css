@@ -62,6 +62,12 @@ a {
     font-size: 10px;
     color: #ccc;
     text-align: center;
+    display: block;
+}
+
+.navbar span.caret {
+    display: inline-block;
+    margin-right: 2px;
 }
 
 .navbar-nav > li {
