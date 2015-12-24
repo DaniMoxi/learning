@@ -1,0 +1,131 @@
+body {
+    padding-top: 85px;
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", "Arial", sans-serif;
+    color: #406c96;
+}
+
+.highlight-primary {
+    background: #406c96;
+    color: #fff;
+    padding: 5px 25px;
+    display: inline;
+    line-height: 60px;
+    border-radius: 5px;
+}
+
+a {
+    color: #406c96;
+}
+
+.fa {
+    margin-right: 10px;
+    color: #406c96;
+    font-size: 1.7em;
+}
+
+/*************************
+          NAVBAR
+*************************/
+
+.navbar {
+    background-color: #fff;
+    min-height: 85px;
+    text-transform: uppercase;
+    font-family: 'Raleway', Arial, sans-serif;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar a {
+    color: #777;
+}
+
+.navbar span {
+    font-size: 10px;
+    color: #ccc;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    padding-bottom: 5px;
+}
+
+.navbar-nav > li > a {
+    padding-bottom: 0;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background: none; 
+}
+
+.navbar-nav > li:hover {
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+.dropdown li {
+    padding: 5px 0;
+    border-left: 1px solid #f4f4f4;
+}
+
+.dropdown li:hover {
+    border-left: 1px solid #406c96;
+}
+
+.navbar li.active  {
+    background: #406c96;
+    color: #fff;
+}
+
+.navbar li.active a,
+.navbar li.active span {
+    color: #fff;
+}
+
+/*************************
+       SECTION ONE
+*************************/
+
+section {
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+section h1 {
+    margin: 30px 0;
+}
+
+.section-default {
+    background: #f7f8f7;
+}
+
+.section-primary {
+    background: #406c96;
+    color: #fff;
+}
+
+ul.list-feature {
+    margin-top: 30px;
+}
+
+.list-feature li {
+    list-style: none;
+    line-height: 2em;
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+.section-showcase img {
+    width: 100%;
+}
